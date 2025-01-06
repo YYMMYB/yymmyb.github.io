@@ -26,7 +26,7 @@ fn f() -> Target {
 - 从 值 构建 `Target` 或 直接输出 `Output`
   - `<Target as FromResidual< <Source as Try>::Residual> >::from_residual()` 来构建, 后面细说.
 
-先看下[解糖`x?`](https://rust-lang.github.io/rfcs/3058-try-trait-v2.html#desugaring-)
+先看下解糖`x?`([原文](https://rust-lang.github.io/rfcs/3058-try-trait-v2.html#desugaring-))
 
 ```rust
 match Try::branch(x) {
