@@ -4,6 +4,7 @@
 
 `FromResidual` 是 `Try` 的 supertrait, 即:
 `trait Try : FromResidual`
+详见[官方文档](https://doc.rust-lang.org/std/ops/trait.Try.html)
 
 ## 正文
 
