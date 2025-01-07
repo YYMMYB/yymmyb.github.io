@@ -55,9 +55,9 @@ match Try::branch(x) {
 可以通过不同的`Source`来进行不同的流程控制,
 `Source::Residual` 不代表失败, 只代表短路时的结果.
 ("短路"指提前返回, 没用"返回"是为了与整个函数的返回值做区分)
-而短路结果的意义, 则通过`Target`来明确, 这通过
-`Target::<Source::Residual>::from_residual()`来实现,
-其通过把短路结果转换为函数的返回结果, 来给短路结果赋予意义.
+而短路结果的意义, 则通过`Target`来明确.
+`<Target as FromResidual<Source::Residual>::from_residual()`
+会把短路结果转换为函数的返回结果, 来给短路结果赋予意义.
 
 例如类似短路 or 的逻辑中, 当遇到正确值的时候, 就会立刻返回,
 `Source::Residual` 代表的实际上是正确值.
